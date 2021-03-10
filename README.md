@@ -10,7 +10,7 @@
 
 - [x] Mensageria e Kafka
 - [x] Instalando o Kafka localmente
-- [ ] Criando produtores em Java
+- [x] Criando produtores em Java
 - [ ] Criando consumidores em Java
 - [ ] Produtores x Consumidores
 
