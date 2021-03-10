@@ -6,7 +6,7 @@
 
 #### Conteúdo programático
 
-##### Produtores, Consumidores e streams
+#### Produtores, Consumidores e streams
 
 1. **Produtores e consumidores**
 
@@ -40,7 +40,7 @@
 - [ ] Microsserviços como módulos em um mono repo
 - [ ] Binários dos microsserviços
 
-##### Fast delegate, evolução e cluster de brokers
+#### Fast delegate, evolução e cluster de brokers
 
 1. **Novos produtores e consumidores**
 
@@ -64,7 +64,7 @@
 - [ ] Cluster de 5 brokers e explorando líderes e réplicas
 - [ ] Acks e reliability
 
-##### Batches, correlation ids e dead letters
+#### Batches, correlation ids e dead letters
 
 1. **Batch**
 
@@ -92,7 +92,7 @@
 - [ ] Retries e assincronicidade
 - [ ] Enviando mensagem de deadletter
 
-##### Idempotência e garantias
+#### Idempotência e garantias
 
 1. **Organização e serviços de email**
 
