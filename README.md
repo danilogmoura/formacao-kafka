@@ -31,7 +31,7 @@
 
 - [x] Diretórios do Kafka e Zookeeper
 - [x] Serialização com GSON
-- [ ] Migrando o log
+- [x] Migrando o log
 - [ ] Deserialização customizada
 - [ ] Lidando com customizações
 
