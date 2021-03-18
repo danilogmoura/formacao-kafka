@@ -25,7 +25,7 @@
 3. Criando nossa camada
 
 - [x] Extraindo uma camada de consumidor
-- [ ] Extraindo nossa camada de producer
+- [x] Extraindo nossa camada de producer
 
 4. Serialização customizada
 

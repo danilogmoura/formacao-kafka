@@ -6,10 +6,11 @@ public class EmailService {
 
     public static void main(String[] args) {
         var emailService = new EmailService();
-        final KafkaService service = new KafkaService(FraudDetectorService.class.getSimpleName(), "ECOMMERCE_SEND_EMAIL",
-                emailService::parse);
+        try (var service = new KafkaService(FraudDetectorService.class.getSimpleName(), "ECOMMERCE_SEND_EMAIL",
+                emailService::parse)) {
 
-        service.run();
+            service.run();
+        }
     }
 
     private void parse(ConsumerRecord<String, String> record) {
