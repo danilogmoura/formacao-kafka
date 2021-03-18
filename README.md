@@ -32,8 +32,8 @@
 - [x] Diretórios do Kafka e Zookeeper
 - [x] Serialização com GSON
 - [x] Migrando o log
-- [ ] Deserialização customizada
-- [ ] Lidando com customizações
+- [x] Deserialização customizada
+- [x] Lidando com customizações
 
 5. Microsserviços e módulos
 
