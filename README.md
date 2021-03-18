@@ -29,8 +29,8 @@
 
 4. Serialização customizada
 
-- [ ] Diretórios do Kafka e Zookeeper
-- [ ] Serialização com GSON
+- [x] Diretórios do Kafka e Zookeeper
+- [x] Serialização com GSON
 - [ ] Migrando o log
 - [ ] Deserialização customizada
 - [ ] Lidando com customizações
