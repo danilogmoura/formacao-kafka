@@ -22,13 +22,13 @@ public class NewOrderMain {
             System.out.println("success " + data.topic() + "::partition " + data.partition() + "/ offset " + data.offset() + "/" + data.timestamp());
         };
 
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 10; i++) {
             var key = UUID.randomUUID().toString();
             var value = key + ",67813,13131313";
-            var record = new ProducerRecord<String, String>("ECOMMERCE_NEW_ORDER", value, value);
+            var record = new ProducerRecord<>("ECOMMERCE_NEW_ORDER", value, value);
 
             var email = "Thank you for your order! We are processing your order!";
-            var emailRecord = new ProducerRecord<String, String>("ECOMMERCE_SEND_EMAIL", email, email);
+            var emailRecord = new ProducerRecord<>("ECOMMERCE_SEND_EMAIL", email, email);
 
             producer.send(record, callback).get();
             producer.send(emailRecord, callback).get();
