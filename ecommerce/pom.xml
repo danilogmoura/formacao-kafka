@@ -14,6 +14,7 @@
         <module>servicelog</module>
         <module>serviceneworder</module>
         <module>commonkafka</module>
+        <module>serviceusers</module>
     </modules>
 
     <properties>

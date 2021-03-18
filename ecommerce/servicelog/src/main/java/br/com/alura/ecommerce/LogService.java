@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
 public class LogService {
 
     public static void main(String[] args) {
-        final LogService logService = new LogService();
+        final var logService = new LogService();
         try (final KafkaService service = new KafkaService(LogService.class.getSimpleName(),
                 Pattern.compile("ECOMMERCE.*"),
                 logService::parse,

@@ -5,6 +5,7 @@ import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.common.serialization.StringDeserializer;
 
 import java.io.Closeable;
+import java.sql.SQLException;
 import java.time.Duration;
 import java.util.Collections;
 import java.util.Map;
@@ -58,7 +59,9 @@ public class KafkaService<T> implements Closeable {
                 for (var record : records) {
                     try {
                         parse.consumer(record);
-                    } catch (ExecutionException | InterruptedException e) {
+                    } catch (ExecutionException | InterruptedException | SQLException e) {
+                        // only catches Exceptions because no matter which Exception i want to recover and parse
+                        // the next one
                         // so far, just logging the exception for this message
                         e.printStackTrace();
                     }
