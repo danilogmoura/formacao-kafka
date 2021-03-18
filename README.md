@@ -50,7 +50,7 @@
 2. Evoluindo um serviço
 
 - [x] Evoluindo serviços e schemas
-- [ ] Escolhendo o id adequado
+- [x] Escolhendo o id adequado
 
 3. Servidor HTTP
 
