@@ -44,7 +44,7 @@
 
 1. Novos produtores e consumidores
 
-- [ ] Produtores consumidores e o eager de patterns
+- [x] Produtores consumidores e o eager de patterns
 - [ ] Um serviço que acessa bancos externos
 
 2. Evoluindo um serviço

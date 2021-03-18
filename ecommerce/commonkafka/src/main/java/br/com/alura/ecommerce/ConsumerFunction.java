@@ -2,7 +2,8 @@ package br.com.alura.ecommerce;
 
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 
-public interface ConsumerFunction<T> {
+import java.util.concurrent.ExecutionException;
 
-    void consumer(ConsumerRecord<String, T> record);
+public interface ConsumerFunction<T> {
+    void consumer(ConsumerRecord<String, T> record) throws ExecutionException, InterruptedException;
 }
