@@ -49,7 +49,7 @@
 
 2. Evoluindo um serviço
 
-- [ ] Evoluindo serviços e schemas
+- [x] Evoluindo serviços e schemas
 - [ ] Escolhendo o id adequado
 
 3. Servidor HTTP
