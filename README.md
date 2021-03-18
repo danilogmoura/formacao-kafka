@@ -37,7 +37,7 @@
 
 5. Microsserviços e módulos
 
-- [ ] Microsserviços como módulos em um mono repo
+- [x] Microsserviços como módulos em um mono repo
 - [ ] Binários dos microsserviços
 
 #### Fast delegate, evolução e cluster de brokers
