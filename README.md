@@ -18,8 +18,8 @@
 
 2. Paralelizando tarefas em um serviço
 
-- [ ] Vários consumidores e produtores
-- [ ] Paralelizando e a importância das keys
+- [x] Vários consumidores e produtores
+- [x] Paralelizando e a importância das keys
 - [ ] Max poll e dando mais chances para auto commit
 
 3. Criando nossa camada
