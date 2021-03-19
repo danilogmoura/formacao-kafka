@@ -13,6 +13,7 @@
         <module name="serviceneworder" />
         <module name="servicelog" />
         <module name="commonkafka" />
+        <module name="servicereadingreport" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

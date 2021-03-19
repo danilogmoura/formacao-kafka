@@ -68,7 +68,7 @@
 
 1. Batch
 
-- [ ] Simulando a geração de relatórios
+- [x] Simulando a geração de relatórios
 - [ ] Generalização de processo de batch assíncrono e http fast delegate
 - [ ] Batch assíncrono em execução
 
