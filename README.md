@@ -74,8 +74,8 @@
 
 2. Serialização e deserialização customizada
 
-- [ ] A importância de um CorrelationId
-- [ ] A serialização customizada com correlation id e um wrapper
+- [x] A importância de um CorrelationId
+- [x] A serialização customizada com correlation id e um wrapper
 - [ ] Deserialização customizada
 
 3. CorrelationID
