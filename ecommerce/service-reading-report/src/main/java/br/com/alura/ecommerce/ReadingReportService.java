@@ -33,7 +33,6 @@ public class ReadingReportService {
 
         IO.copyTo(SOURCE, target);
         IO.append(target, "Created for" + user.getUuid());
-
         System.out.println("File created::" + target.getAbsolutePath());
     }
 }
