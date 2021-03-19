@@ -9,7 +9,7 @@ import java.util.Map;
 
 public class ReadingReportService {
 
-    private static final Path SOURCE = new File("/src/main/resources/report.txt").toPath();
+    private static final Path SOURCE = new File("src/main/resources/report.txt").toPath();
 
     public static void main(String[] args) {
         final var readingReportService = new ReadingReportService();

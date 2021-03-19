@@ -46,7 +46,6 @@ public class BatchSendMessageService {
         System.out.println("----------------------------------------");
         System.out.println("Processing new batch");
         System.out.println("Topic:: " + record.value());
-        var order = record.value();
 
         for (User user : getAllUsers()) {
             userDispatcher.send(record.value(), user.getUuid(), user);
