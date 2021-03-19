@@ -96,7 +96,7 @@
 
 1. Organização e serviços de email
 
-- [ ] Organização e lidando com múltiplos tópicos de envio em um mesmo serviço
+- [x] Organização e lidando com múltiplos tópicos de envio em um mesmo serviço
 - [ ] Micro serviços de email e fast delegate real
 
 2. Camada de serviços

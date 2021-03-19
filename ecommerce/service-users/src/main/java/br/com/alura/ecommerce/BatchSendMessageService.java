@@ -1,5 +1,7 @@
 package br.com.alura.ecommerce;
 
+import br.com.alura.ecommerce.consumer.KafkaService;
+import br.com.alura.ecommerce.dispatcher.KafkaDispatcher;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 
 import java.sql.Connection;
@@ -41,14 +43,12 @@ public class BatchSendMessageService {
         }
     }
 
-    private void parse(ConsumerRecord<String, Message<String>> record) throws ExecutionException, InterruptedException, SQLException {
+    private void parse(ConsumerRecord<String, Message<String>> record) throws SQLException {
         System.out.println("----------------------------------------");
         System.out.println("Processing new batch");
+        
         var message = record.value();
         System.out.println("Topic:: " + message.getPayload());
-
-        if (true)
-            throw new RuntimeException("Forcing an error!!!");
 
         for (User user : getAllUsers()) {
             userDispatcher.sendAsync(message.getPayload(),

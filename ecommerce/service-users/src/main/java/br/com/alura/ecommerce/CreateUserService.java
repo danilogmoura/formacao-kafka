@@ -1,5 +1,6 @@
 package br.com.alura.ecommerce;
 
+import br.com.alura.ecommerce.consumer.KafkaService;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 
 import java.sql.Connection;
@@ -42,6 +43,7 @@ public class CreateUserService {
         System.out.println("----------------------------------------");
         System.out.println("Processing new order, checking for new user");
         System.out.println(record.value());
+
         var message = record.value();
         var order = message.getPayload();
 
