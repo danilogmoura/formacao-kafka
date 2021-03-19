@@ -22,6 +22,7 @@ public class CreateUserService {
                     "email varchar(200))");
         } catch (SQLException ex) {
             //be careful, the sql could be wrong, be really careful
+            ex.printStackTrace();
         }
     }
 

@@ -69,7 +69,7 @@
 1. Batch
 
 - [x] Simulando a geração de relatórios
-- [ ] Generalização de processo de batch assíncrono e http fast delegate
+- [x] Generalização de processo de batch assíncrono e http fast delegate
 - [ ] Batch assíncrono em execução
 
 2. Serialização e deserialização customizada
