@@ -84,8 +84,8 @@
 
 4. Arquitetura e falhas até agora
 
-- [ ] Revisando a arquitetura até agora
-- [ ] Revisando o rebalanceamento
+- [x] Revisando a arquitetura até agora
+- [x] Revisando o rebalanceamento
 
 5. Assincronicidade, retries e deadletters
 
