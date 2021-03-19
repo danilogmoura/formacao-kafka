@@ -102,7 +102,7 @@
 2. Camada de serviços
 
 - [x] Extraindo uma camada de serviços
-- [ ] Paralelizando com pools de threads
+- [x] Paralelizando com pools de threads
 - [ ] Facilidade de criar novos serviços
 
 3. Commits e offsets

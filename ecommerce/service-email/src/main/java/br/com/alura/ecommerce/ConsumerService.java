@@ -9,5 +9,4 @@ public interface ConsumerService<T> {
     String getTopic();
 
     String getConsumerGroup();
-
 }
