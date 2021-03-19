@@ -55,14 +55,14 @@
 3. Servidor HTTP
 
 - [x] Usando um servidor http como ponto de entrada
-- [ ] Fast delegate
+- [x] Fast delegate
 
 4. Cluster de brokers
 
-- [ ] Single point of failure do broker
-- [ ] Replicação em cluster
-- [ ] Cluster de 5 brokers e explorando líderes e réplicas
-- [ ] Acks e reliability
+- [x] Single point of failure do broker
+- [x] Replicação em cluster
+- [x] Cluster de 5 brokers e explorando líderes e réplicas
+- [x] Acks e reliability
 
 #### Batches, correlation ids e dead letters
 
