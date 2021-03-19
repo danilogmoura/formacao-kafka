@@ -101,7 +101,7 @@
 
 2. Camada de serviços
 
-- [ ] Extraindo uma camada de serviços
+- [x] Extraindo uma camada de serviços
 - [ ] Paralelizando com pools de threads
 - [ ] Facilidade de criar novos serviços
 
