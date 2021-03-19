@@ -1,14 +1,12 @@
 package br.com.alura.ecommerce;
 
-import org.apache.kafka.clients.producer.Callback;
-import org.apache.kafka.clients.producer.KafkaProducer;
-import org.apache.kafka.clients.producer.ProducerConfig;
-import org.apache.kafka.clients.producer.ProducerRecord;
+import org.apache.kafka.clients.producer.*;
 import org.apache.kafka.common.serialization.StringSerializer;
 
 import java.io.Closeable;
 import java.util.Properties;
 import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
 
 public class KafkaDispatcher<T> implements Closeable {
     private final KafkaProducer<String, Message<T>> producer;
@@ -26,7 +24,12 @@ public class KafkaDispatcher<T> implements Closeable {
         return properties;
     }
 
-    public void send(String topic, String key, CorrelationId id, T payload) throws ExecutionException, InterruptedException {
+    void send(String topic, String key, CorrelationId id, T payload) throws ExecutionException, InterruptedException {
+        Future<RecordMetadata> future = sendAsync(topic, key, id, payload);
+        future.get();
+    }
+
+    Future<RecordMetadata> sendAsync(String topic, String key, CorrelationId id, T payload) {
         var value = new Message<>(id, payload);
         var record = new ProducerRecord<>(topic, key, value);
         Callback callback = (data, ex) -> {
@@ -36,7 +39,7 @@ public class KafkaDispatcher<T> implements Closeable {
             }
             System.out.println("success " + data.topic() + "::partition " + data.partition() + "/ offset " + data.offset() + "/" + data.timestamp());
         };
-        producer.send(record, callback).get();
+        return producer.send(record, callback);
     }
 
     @Override

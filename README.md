@@ -89,7 +89,7 @@
 
 5. Assincronicidade, retries e deadletters
 
-- [ ] Retries e assincronicidade
+- [x] Retries e assincronicidade
 - [ ] Enviando mensagem de deadletter
 
 #### Idempotência e garantias
