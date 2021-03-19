@@ -15,6 +15,7 @@
         <module>serviceneworder</module>
         <module>commonkafka</module>
         <module>serviceusers</module>
+        <module>servicehttpecommerce</module>
     </modules>
 
     <properties>

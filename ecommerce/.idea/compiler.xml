@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="serviceemail" />
+        <module name="servicehttpecommerce" />
         <module name="serviceusers" />
         <module name="servicefrauddetector" />
         <module name="serviceneworder" />

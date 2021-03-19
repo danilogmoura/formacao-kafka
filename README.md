@@ -54,7 +54,7 @@
 
 3. Servidor HTTP
 
-- [ ] Usando um servidor http como ponto de entrada
+- [x] Usando um servidor http como ponto de entrada
 - [ ] Fast delegate
 
 4. Cluster de brokers
