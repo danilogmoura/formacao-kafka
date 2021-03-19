@@ -80,7 +80,7 @@
 
 3. CorrelationID
 
-- [ ] Implementando o correlation id
+- [x] Implementando o correlation id
 
 4. Arquitetura e falhas até agora
 
