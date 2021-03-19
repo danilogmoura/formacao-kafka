@@ -5,8 +5,6 @@ import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.common.serialization.StringDeserializer;
 
 import java.io.Closeable;
-import java.io.IOException;
-import java.sql.SQLException;
 import java.time.Duration;
 import java.util.Collections;
 import java.util.Map;
@@ -49,20 +47,25 @@ public class KafkaService<T> implements Closeable {
         return properties;
     }
 
-    public void run() {
-        while (true) {
-            var records = consumer.poll(Duration.ofMillis(100));
-            if (!records.isEmpty()) {
-                System.out.println("Found " + records.count() + " record(s)");
+    public void run() throws ExecutionException, InterruptedException {
+        try (var deadLetter = new KafkaDispatcher<>()) {
 
-                for (var record : records) {
-                    try {
-                        parse.consumer(record);
-                    } catch (ExecutionException | InterruptedException | SQLException | IOException e) {
-                        // only catches Exceptions because no matter which Exception i want to recover and parse
-                        // the next one
-                        // so far, just logging the exception for this message
-                        e.printStackTrace();
+            while (true) {
+                var records = consumer.poll(Duration.ofMillis(100));
+                if (!records.isEmpty()) {
+                    System.out.println("Found " + records.count() + " record(s)");
+
+                    for (var record : records) {
+                        try {
+                            parse.consumer(record);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                            var message = record.value();
+                            deadLetter.send("ECOMMERCE_DEADLETTER",
+                                    message.getId().toString(),
+                                    message.getId().continueWith("DeadLetter"),
+                                    new GsonSerializer().serialize("", message));
+                        }
                     }
                 }
             }

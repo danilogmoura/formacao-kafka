@@ -30,7 +30,7 @@ public class BatchSendMessageService {
         }
     }
 
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) throws SQLException, ExecutionException, InterruptedException {
         final var batchSendMessageService = new BatchSendMessageService();
 
         try (var service = new KafkaService<>(BatchSendMessageService.class.getSimpleName(),
@@ -46,6 +46,9 @@ public class BatchSendMessageService {
         System.out.println("Processing new batch");
         var message = record.value();
         System.out.println("Topic:: " + message.getPayload());
+
+        if (true)
+            throw new RuntimeException("Forcing an error!!!");
 
         for (User user : getAllUsers()) {
             userDispatcher.sendAsync(message.getPayload(),
