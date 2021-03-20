@@ -107,7 +107,7 @@
 
 3. Commits e offsets
 
-- [ ] Offset latest e earliest
+- [x] Offset latest e earliest
 
 4. Lidando com mensagens duplicadas
 
