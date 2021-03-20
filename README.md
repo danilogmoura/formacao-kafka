@@ -117,6 +117,6 @@
 5. Idempotência
 
 - [x] Id natural e idempotência no banco
-- [ ] Extraindo o common database
+- [x] Extraindo o common database
 - [ ] Idempotência e fast delegate
 - [ ] Idempotência em apis
