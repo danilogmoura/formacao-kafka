@@ -111,8 +111,8 @@
 
 4. Lidando com mensagens duplicadas
 
-- [ ] O problema da mensagem duplicada
-- [ ] Kafka transacional
+- [x] O problema da mensagem duplicada
+- [x] Kafka transacional
 
 5. Idempotência
 
