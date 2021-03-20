@@ -103,7 +103,7 @@
 
 - [x] Extraindo uma camada de serviços
 - [x] Paralelizando com pools de threads
-- [ ] Facilidade de criar novos serviços
+- [X] Facilidade de criar novos serviços
 
 3. Commits e offsets
 
