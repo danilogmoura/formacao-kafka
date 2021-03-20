@@ -30,7 +30,7 @@ public class LocalDatabase {
         return prepare(query, params).executeQuery();
     }
 
-    private PreparedStatement prepare(String statement, String[] params) throws SQLException {
+    private PreparedStatement prepare(String statement, String... params) throws SQLException {
         var preparedStatement = connection.prepareStatement(statement);
 
         for (int i = 0; i < params.length; i++) {
